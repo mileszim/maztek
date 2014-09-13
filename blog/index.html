@@ -1,0 +1,44 @@
+---
+layout: page
+title:  Blog
+---
+
+<div class="row">
+  <!-- Posts -->
+  <div class="col-md-8">
+    {% for post in paginator.posts %}
+      <div class="row">
+        <div class="col-md-12">
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <span class="help-block">{{ post.date | date_to_string }}</span>
+          {{ post.excerpt }}
+        </div>
+      </div>
+      <br><br><br>
+    {% endfor %}
+    
+    {% include paginator.html %}
+  </div>
+  
+  <!-- Sidebar -->
+  <div class="col-md-3 col-md-offset-1">
+    <h3>Archives</h3>
+    {% for post in site.posts %}
+      {% unless post.next %}
+        <h4>{{ post.date | date: '%Y' }}</h4>
+        <table class="table table-condensed">
+      {% else %}
+        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+        {% if year != nyear %}
+          </table>
+          <br>
+          <h4>{{ post.date | date: '%Y' }}</h4>
+          <table class="table table-condensed">
+        {% endif %}
+      {% endunless %}
+        <tr><td width="50"><time>{{ post.date | date:"%d %b" }}</time></td> <td style="text-align:left"><a href="{{ post.url }}">{{ post.title }}</a></td></tr>
+    {% endfor %}
+    </table>
+  </div>
+</div>
