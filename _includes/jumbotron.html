@@ -1,7 +1,13 @@
 <div class="jumbotron">
   <div class="container">
-    <h1>maztek</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+    <h1>{{ page.jumbotron.lead }}</h1>
+    <p>{{ page.jumbotron.text }}</p>
+    {% if page.jumbotron.button %}
+      <p>
+        <a href="{{ page.jumbotron.button.link }}" class="btn btn-lg btn-primary">
+          {{ page.jumbotron.button.text }} <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </p>
+    {% endif %}
   </div>
 </div>

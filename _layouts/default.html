@@ -5,6 +5,10 @@
   <body>
     {% include nav.html %}
     
+    {% if page.jumbotron %}
+      {% include jumbotron.html %}
+    {% endif %}
+    
     <div class="container">
       {{ content }}
        
