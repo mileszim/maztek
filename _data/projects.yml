@@ -42,3 +42,14 @@
 - name: Elastic Protein Graph
   img:  epgraph.png
   desc: "The Elastic Protein Graph was an experimental graph database of protein-protein and protein-drug interactions, to help out other researchers in the Verkhivker Molecular Chaperones and Cancer Research Group at Chapman. As an intuitive network, its design enabled a simple way to understand the static interactions of molecular chaperones and chemical agents in cellular systems. EPG was built with jRuby and Neo4j, using d3 for network visualizations."
+
+- name: Beowulf Xbox Cluster
+  img:  xboxcluster_rack.jpg
+  desc: |
+    The Beowulf Xbox Cluster was a project I undertook in high school. The goal was to run as large of a Linux cluster as possible using only modded original Xboxes. I ended up using only borrowed equipment, totaling 8 networked xboxes (5864 MHz) at its peak.
+    
+    I replaced the HDD on the master xbox with a larger one (around 250 gigs) and had all the other boxes NFS into the master.
+    
+    At the time, the only software I could test it with was dvd::rip split across the cores. During the tests I used my main computer as the master and all 8 xboxes as compute nodes. The total processing power of all 8 boxes combined was about as fast as a single Intel Core 2 Duo. Additionally, because each Xbox only had a 10/100 network link, the cluster had significant latency delays sharing large files to a single master node (think 100/8 = 12.5Mbps each).
+    
+    While mostly useless, this was still an awesome project and I had a lot of fun working on it.

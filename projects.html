@@ -6,6 +6,7 @@ title:  Projects
 {% for project in site.data.projects %}
 <div class="row">
   <div class="col-lg-6">
+    <a name="{{ project.name | slugify }}"></a>
     <h3>{{ project.name }}</h3>
     {{ project.desc | markdownify }}
     {% if project.url %}
