@@ -1,3 +1,3 @@
 $(document).ready(function() {
-  $('body').scrollspy({ target: '.projects-sidebar' });
+  //$('body').scrollspy({ target: '.projects-sidebar' });
 })
