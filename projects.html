@@ -16,7 +16,7 @@ title:  Projects
     </div>
   </div>
   
-  <div class="col-lg-9 col-md-12" id="scroller" data-spy="scroll" data-target=".projects-sidebar">
+  <div class="col-lg-9 col-md-12">
     {% for project in site.data.projects %}
     <div class="row project" id="{{ project.name | downcase | replace: ' ', '-' | replace: '.', '-' }}">
       <div class="col-md-6">
