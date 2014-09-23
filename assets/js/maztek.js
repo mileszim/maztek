@@ -1,3 +1,7 @@
-$(document).ready(function() {
-  //$('body').scrollspy({ target: '.projects-sidebar' });
-})
+$(function() {
+  $('body').scrollspy({ target: '.projects-sidebar' });
+  
+  $(window).on('load',function() {
+    $('body').scrollspy('refresh');
+  });
+});

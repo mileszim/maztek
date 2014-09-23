@@ -9,7 +9,7 @@ title:  Projects
       <ul class="nav projects-sidenav">
         {% for project in site.data.projects %}
         <li>
-          <a href="#{{ project.name | slugify }}">{% if project.short %}{{ project.short }}{% else %}{{ project.name }}{% endif %}</a>
+          <a href="#{{ project.name | downcase | replace: ' ', '-' | replace: '.', '-' }}">{% if project.short %}{{ project.short }}{% else %}{{ project.name }}{% endif %}</a>
         </li>
         {% endfor %}
       </ul>
@@ -18,7 +18,7 @@ title:  Projects
   
   <div class="col-lg-9 col-md-12" id="scroller" data-spy="scroll" data-target=".projects-sidebar">
     {% for project in site.data.projects %}
-    <div class="row project" id="{{ project.name | slugify }}">
+    <div class="row project" id="{{ project.name | downcase | replace: ' ', '-' | replace: '.', '-' }}">
       <div class="col-md-6">
         <h3>{{ project.name }}</h3>
         {{ project.desc | markdownify }}
