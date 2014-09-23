@@ -3,23 +3,38 @@ layout: page
 title:  Projects
 ---
 
-{% for project in site.data.projects %}
 <div class="row">
-  <div class="col-lg-6">
-    <a name="{{ project.name | slugify }}"></a>
-    <h3>{{ project.name }}</h3>
-    {{ project.desc | markdownify }}
-    {% if project.url %}
-    <p><a class="btn btn-primary" href="{{ project.url }}">Visit Project</a></p>
-    {% else %}
-    <p><a class="btn btn-primary" href="#" disabled>Not Currently Available</a></p>
-    {% endif %}
+  <div class="col-lg-3 hidden-md hidden-sm hidden-xs">
+    <div class="projects-sidebar hidden-print hidden-xs hidden-sm hidden-md" role="complementary" data-spy="affix" data-offset-top="89" data-offset-bottom="50">
+      <ul class="nav projects-sidenav">
+        {% for project in site.data.projects %}
+        <li>
+          <a href="#{{ project.name | slugify }}">{% if project.short %}{{ project.short }}{% else %}{{ project.name }}{% endif %}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
-  <div class="col-lg-6">
-    <a href="{{ site.baseurl }}/assets/img/projects/{{ project.img }}">
-      <img src="{{ site.baseurl }}/assets/img/projects/{{ project.img }}" class="img-responsive img-thumbnail" />
-    </a>
+  
+  <div class="col-lg-9 col-md-12" id="scroller" data-spy="scroll" data-target=".projects-sidebar">
+    {% for project in site.data.projects %}
+    <div class="row project" id="{{ project.name | slugify }}">
+      <div class="col-md-6">
+        <h3>{{ project.name }}</h3>
+        {{ project.desc | markdownify }}
+        {% if project.url %}
+        <p><a class="btn btn-primary" href="{{ project.url }}">Visit Project</a></p>
+        {% else %}
+        <p><a class="btn btn-primary" href="#" disabled>Not Currently Available</a></p>
+        {% endif %}
+      </div>
+      <div class="col-md-6">
+        <a href="{{ site.baseurl }}/assets/img/projects/{{ project.img }}">
+          <img src="{{ site.baseurl }}/assets/img/projects/{{ project.img }}" class="img-project img-responsive img-thumbnail" />
+        </a>
+      </div>
+    </div>
+    <br><br>
+    {% endfor %}
   </div>
 </div>
-<br><br>
-{% endfor %}

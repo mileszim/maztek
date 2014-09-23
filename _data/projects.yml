@@ -3,9 +3,10 @@
   img:  horatio.png
   desc: "Horatio is a compiler for the Shakespeare Programming Language written in Javascript. The goal is to compile and run SPL code directly in the browser. Accompanying this project, I made [shakespearelang.org](http://shakespearelang.org) to provide a resource for documentation about the language and projects surrounding it."
 
-- name: Power Plant Investment Strategy Optimization
-  url:  "https://github.com/mileszim/mathematica/tree/master/power_plants"
-  img:  power_plants.png
+- name:  Power Plant Investment Strategy Optimization
+  short: Power Plants
+  url:   "https://github.com/mileszim/mathematica/tree/master/power_plants"
+  img:   power_plants.png
   desc: |
     Using genetic algorithms, this project optimizes the investment strategy for building power plants over an arbitrary lifetime according to simulated market conditions. It develops three different investment strategies:
     
