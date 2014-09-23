@@ -1,0 +1,44 @@
+- name: Horatio
+  url:  "https://mileszim.github.io/horatio"
+  img:  horatio.png
+  desc: "Horatio is a compiler for the Shakespeare Programming Language written in Javascript. The goal is to compile and run SPL code directly in the browser. Accompanying this project, I made [shakespearelang.org](http://shakespearelang.org) to provide a resource for documentation about the language and projects surrounding it."
+
+- name: Power Plant Investment Strategy Optimization
+  url:  "https://github.com/mileszim/mathematica/tree/master/power_plants"
+  img:  power_plants.png
+  desc: |
+    Using genetic algorithms, this project optimizes the investment strategy for building power plants over an arbitrary lifetime according to simulated market conditions. It develops three different investment strategies:
+    
+    1. a "benevolent dictator" (like a government-controlled monopolist) with the goal of maximizing power generation over profit
+    2. a regulated monopoly with the goal of maximizing profit
+    3. a competitive market of 3 firms trying to maximize profit
+    
+    Two different types of power plants are used: large-types, with high build cost and low power production cost, and small-types, with low build costs but higher power production costs. Additionally, to account for real-world conditions, the market simulation fluctuates over daily minimum/maximum power needs of the system, and has a growing demand over the simulation lifetime.
+
+- name: Nostoi Project
+  img:  nostoi.png
+  desc: "Nostoi Project was a prototype antiquities database application, enabling researchers to collect and analyze fractured data about the movement of artifacts through illicit smuggling networks, from their initial location of discovery to their residence in museums and galleries. The results of this project have since evolved into some of the core components of our analytics platform at Antiquarium."
+
+- name: Inside.Chapman
+  url:  "https://inside.chapman.edu/"
+  img:  inside.png
+  desc: "Inside began as another exploratory project by our team attempting to provide a single resource for current & real-time content about/related to Chapman University. Initially a node.js/mongo project built with sails.js, in early 2014 the entire platform was reconstructed and integrated with our other platforms, including Social.Chapman. It uses Ruby on Rails backed with PostgreSQL as the primary system, and real-time social media streaming using Hummingbird."
+
+- name: Social.Chapman
+  url:  "https://social.chapman.edu/"
+  img:  social_hub.png
+  desc: "The Chapman Social Hub began as an exploratory project attempting to unify all of the university's social media accounts into one consistent, realtime interface. I built the initial platform with node.js and mongodb, with websockets providing realtime connections between the users and the server. In early 2014, another developer joined our team and we re-architected the entire platform to integrate with Inside.Chapman. Social.Chapman is now a social media specific subset of the data collected and managed by Inside."
+
+- name: Blogs.Chapman
+  url:  "https://blogs.chapman.edu/"
+  img:  blogs.png
+  desc: "Launched in early 2012, we saw this as an opportunity to unify the Chapman department blogs scattered across the web into one platform. I oversaw its deployment, and then managed its scaling and systems administration as it grew from a simple blogging platform for the campus and into one of the primary publication sources for the university."
+
+- name: Hummingbird
+  url:  "https://github.com/chapmanu/hummingbird"
+  img:  hummingbird.png
+  desc: "Hummingbird is an open-source node.js application for simple and consistent interaction and management with various social streams. It's designed to integrate with service-oriented architectures, using a simple HTTP rest api for communication, and queuing the resulting posts into Redis. Hummingbird transforms the varying types of incoming social media posts into a single format, allowing consistency of the response format regardless of its source."
+
+- name: Elastic Protein Graph
+  img:  epgraph.png
+  desc: "The Elastic Protein Graph was an experimental graph database of protein-protein and protein-drug interactions, to help out other researchers in the Verkhivker Molecular Chaperones and Cancer Research Group at Chapman. As an intuitive network, its design enabled a simple way to understand the static interactions of molecular chaperones and chemical agents in cellular systems. EPG was built with jRuby and Neo4j, using d3 for network visualizations."

@@ -1,8 +1,24 @@
 ---
-layout: default
+layout: page
 title:  Projects
 ---
 
-<div class="page-header">
-  <h1>Projects</h1>
+{% for project in site.data.projects %}
+<div class="row">
+  <div class="col-lg-6">
+    <h3>{{ project.name }}</h3>
+    {{ project.desc | markdownify }}
+    {% if project.url %}
+    <p><a class="btn btn-primary" href="{{ project.url }}">Visit Project</a></p>
+    {% else %}
+    <p><a class="btn btn-primary" href="#" disabled>Not Currently Available</a></p>
+    {% endif %}
+  </div>
+  <div class="col-lg-6">
+    <a href="{{ site.baseurl }}/assets/img/projects/{{ project.img }}">
+      <img src="{{ site.baseurl }}/assets/img/projects/{{ project.img }}" class="img-responsive img-thumbnail" />
+    </a>
+  </div>
 </div>
+<br><br>
+{% endfor %}
