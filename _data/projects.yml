@@ -1,3 +1,8 @@
+- name: Squid
+  url:  "https://experiments.chapmanesi.org/"
+  img:  squid.png
+  desc: "Squid is an experiment deployment framework built with Rails for use at Chapman University's Economic Science Institute. Experiments are self-contained web apps, hosted through our own git repository. The apps are deployed through Heroku for the duration of the experiment session, with log data stored using the Orchestrate.io DB. When the session ends, the heroku instances are terminated, and the log data continues to be accessible through the framework."
+
 - name: Horatio
   url:  "https://mileszim.github.io/horatio"
   img:  horatio.png
